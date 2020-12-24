@@ -167,6 +167,9 @@ a.text--light-gray:hover {
     color: var(--color-white);
     background: var(--color-green);
     border: 2px solid var(--color-green);
+
+    -webkit-appearance: initial;
+    -moz-appearance: initial;
 }
 
 .button:hover {
@@ -296,7 +299,7 @@ a.text--light-gray:hover {
     background-size: cover;
     background-position: center center;
     overflow: hidden;
-    background-attachment: fixed;
+    
 }
 
 .section {
@@ -700,8 +703,12 @@ img {
     }
 
     /**
-    *   Design Components 
+    *   Display Components 
     */
+    .section--image-background {
+        background-attachment: fixed;
+    }
+
     .section--contained {
         max-width: 960px;
         padding: 0 15px;
