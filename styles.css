@@ -197,7 +197,8 @@ a.text--light-gray:hover {
 .fade--active {
     opacity: 1;
     top: 0;
-    transition: all 400ms ease-in-out;
+    transition: opacity 400ms ease-in-out,
+                top 300ms ease-in-out;
 }
 
 

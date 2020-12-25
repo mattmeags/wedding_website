@@ -49,7 +49,7 @@ function navClick(e) {
     var destination = document.querySelector(this.getAttribute('href'));
     var nav = document.querySelector('[data-nav]');
 
-    nav.classList.remove('.nav--active');
+    nav.classList.remove('nav--active');
     initNavFade();
     if (destination) {
         destination.scrollIntoView({ behavior: 'smooth', block: 'start'});

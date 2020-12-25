@@ -1,3 +1,9 @@
+/**
+ * 
+ * Load inital images right away so there isn't a huge lag  
+ * 
+ */
+
 (function() {
     var bgImageD, bgImageM;
 
