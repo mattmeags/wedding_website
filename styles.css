@@ -355,6 +355,10 @@ a.text--light-gray:hover {
     display: flex;
 }
 
+.loding__list-item {
+    margin-bottom: 15px;
+}
+
 
 /**
 *   Nav 
@@ -423,6 +427,11 @@ img {
 */
 .registry__icon {
     max-width: 250px;
+    margin-bottom: 30px;
+}
+
+.registry__icon:last-of-type {
+    margin-top: 0;
 }
 
 /**
