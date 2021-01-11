@@ -148,7 +148,7 @@ function handleInitialAnimations() {
                         break;
                     }
                 }
-            }, 100);
+            }, 50);
         }).then(function() {
             clearInterval(navAnimationInterval);
             clearTimeout(navAnimationTimeout);

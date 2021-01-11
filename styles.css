@@ -26,6 +26,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+ul, ol {
+    margin: 0;
+}
+
 li {
     list-style-type: none;
 }
@@ -201,95 +205,6 @@ a.text--light-gray:hover {
                 top 300ms ease-in-out;
 }
 
-
-
-/**
-* Loader
-*/
-.loader {
-    height: 100vh;
-    width: 100vw;
-    z-index: 100;
-}
-@keyframes ldio-28oammjtkfe {
-    0% {
-        transform: rotate(0)
-    }
-
-    100% {
-        transform: rotate(360deg)
-    }
-}
-
-.ldio-28oammjtkfe div {
-    box-sizing: border-box !important
-}
-
-.ldio-28oammjtkfe>div {
-    position: absolute;
-    width: 112px;
-    height: 112px;
-    top: 44px;
-    left: 44px;
-    border-radius: 50%;
-    border: 16px solid #000;
-    border-color: #48624d transparent #48624d transparent;
-    animation: ldio-28oammjtkfe 1.5873015873015872s linear infinite;
-}
-
-.ldio-28oammjtkfe>div:nth-child(2) {
-    border-color: transparent
-}
-
-.ldio-28oammjtkfe>div:nth-child(2) div {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform: rotate(45deg);
-}
-
-.ldio-28oammjtkfe>div:nth-child(2) div:before,
-.ldio-28oammjtkfe>div:nth-child(2) div:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: -16px;
-    left: 32px;
-    background: #48624d;
-    border-radius: 50%;
-    box-shadow: 0 96px 0 0 #48624d;
-}
-
-.ldio-28oammjtkfe>div:nth-child(2) div:after {
-    left: -16px;
-    top: 32px;
-    box-shadow: 96px 0 0 0 #48624d;
-}
-
-.loadingio-spinner-dual-ring-l1l67wyy52 {
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-    overflow: hidden;
-    background: none;
-}
-
-.ldio-28oammjtkfe {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform: translateZ(0) scale(1);
-    backface-visibility: hidden;
-    transform-origin: 0 0;
-    /* see note above */
-}
-
-.ldio-28oammjtkfe div {
-    box-sizing: content-box;
-}
-
 /** 
 * Display Components 
 */
@@ -346,6 +261,17 @@ a.text--light-gray:hover {
     background: rgba(0, 0, 0, 0.6);
 }
 
+.section--dark-overlay-helper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
 .full-width {
     width: 100%;
 }
@@ -365,7 +291,7 @@ a.text--light-gray:hover {
 */
 .header {
     width: 100vw;
-    z-index: 100;
+    z-index: 200;
     position: fixed;
     top: 0;
     left: 0;
@@ -393,7 +319,7 @@ a.text--light-gray:hover {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 100;
+    z-index: 200;
 }
 
 /*** Images ***/
@@ -443,9 +369,37 @@ img {
 }
 
 /**
+*   Party
+*/
+
+.wedding-party-row__item {
+    position: relative;
+}
+
+.wedding-party-row__item:hover {
+    cursor: pointer;
+    z-index: 100;
+    transform: scale(1.025);
+    transition: all 100ms linear;
+} 
+
+.wedding-party-row__item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.wedding-party-item__details {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+/**
 *   Mobile
 */
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 767px) {
     /**
     * Typogrpahy 
     */
@@ -570,10 +524,31 @@ img {
     .footer__icon svg {
         height: 50px;
     }
+
+    /**
+    *   Party
+    */
+
+    .wedding-party-row__item {
+        flex-basis: 50%;
+        max-height: 500px;
+    }
+
+    .wedding-party__header {
+        padding: 40px;
+    }
+
+    .wedding-party-item__details {
+        padding: 10px 20px;
+    }
 }
 
+
+/* @media screen and () */
+
+
 /** Desktop **/
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
     /**
     * Typography
     */
@@ -770,5 +745,26 @@ img {
 
     .footer__icon svg {
         height: 75px;
+    }
+
+    /**
+    *   Party
+    */
+
+    /* .wedding-party-row__item {
+        width: 25%;
+        position: relative;
+    } */
+    .wedding-party__header {
+        padding: 20px;
+        z-index: 150;
+    }
+
+    .wedding-party-row__item {
+        flex-basis: 25%;
+    }
+
+    .wedding-party-item__details {
+        padding: 10px 20px;
     }
 }
