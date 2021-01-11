@@ -751,10 +751,6 @@ img {
     *   Party
     */
 
-    /* .wedding-party-row__item {
-        width: 25%;
-        position: relative;
-    } */
     .wedding-party__header {
         padding: 20px;
         z-index: 150;
@@ -762,6 +758,7 @@ img {
 
     .wedding-party-row__item {
         flex-basis: 25%;
+        max-height: 450px;
     }
 
     .wedding-party-item__details {
