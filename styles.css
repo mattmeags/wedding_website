@@ -758,10 +758,15 @@ img {
 
     .wedding-party-row__item {
         flex-basis: 25%;
-        max-height: 450px;
     }
 
     .wedding-party-item__details {
         padding: 10px 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .wedding-party-row__item {
+        max-height: 450px;
     }
 }
