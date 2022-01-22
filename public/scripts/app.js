@@ -174,15 +174,19 @@ function handleInitialAnimations() {
     }, 200);   
 }
 
+function initNav() {
+    initMobileNav();
+    initDesktopNav();
+}
+
 /**
  * General init function to get our JS running
  */
 function init() {
-    window.etbm = {};
+    window.etbm = window.etbm ? window.etbm : {};
     initScrollingEvents();
-    initMobileNav();
+    initNav()
     initTextFade();
-    initDesktopNav();
     handleInitialAnimations();
 }
 
