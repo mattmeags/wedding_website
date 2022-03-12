@@ -48,6 +48,12 @@ a.text--light-gray:hover {
     color: var(--color-lighest-green);
 }
 
+.flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /** 
 * Background 
 */
@@ -157,6 +163,10 @@ a.text--light-gray:hover {
 
 .set--full-height {
     height: 100%;
+}
+
+.set--partial-full {
+    width: 80%;
 }
 
 
