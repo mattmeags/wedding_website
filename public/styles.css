@@ -54,6 +54,10 @@ a.text--light-gray:hover {
     align-items: center;
 }
 
+.display--inline {
+    display: inline;
+}
+
 /** 
 * Background 
 */
@@ -192,6 +196,15 @@ a.text--light-gray:hover {
     background: var(--color-white);
     transition: all .25s ease-out;
 }
+
+
+/**
+ * Toggle
+ */
+summary ~ * {
+    margin-left: 20px;
+}
+
 
 /** 
 * Effects 

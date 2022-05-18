@@ -90,10 +90,10 @@ function handleScrollFade() {
 /**
  * Footer fade is different than others because we can't scroll past it
  */
-function handleFooterFade() {
-    var footerFadeIn = document.querySelector('[data-footer-fade-in]');
-    footerFadeIn.classList.add('fade--active');
-}
+// function handleFooterFade() {
+//     var footerFadeIn = document.querySelector('[data-footer-fade-in]');
+//     footerFadeIn.classList.add('fade--active');
+// }
 
 function handleScrollNav(nav) {
     if (this.scrollY >= 50) {
@@ -174,9 +174,59 @@ function handleInitialAnimations() {
     }, 200);   
 }
 
+/**
+ * Wrapper to init the navitation
+ */
 function initNav() {
     initMobileNav();
     initDesktopNav();
+}
+
+/**
+ * Gets all the toggle buttons 
+ * @param {function} callback
+ */
+function getToggles(callback) {
+    var toggles = document.querySelectorAll('[data-toggle]');
+    if (toggles.length) {
+        [].forEach.call(toggles, function(toggle) {
+            if (callback && typeof callback === 'function') {
+                callback.call(toggle);
+            }
+        })
+    }
+}
+
+/**
+ * Gives toggles accordion like functionality
+ * @param {event} e 
+ */
+function handleToggleClick(e) {
+    if (this.open) {
+        e.preventDefault()
+        this.open = false;
+    } else {
+        var currentToggle = this;
+        function closeOtherToggles() {
+            if (this.open && this !== currentToggle) {
+                this.open = false;
+            }
+        }
+
+        getToggles(closeOtherToggles);
+    }
+    
+    
+}
+
+/**
+ * attaches click event to toggle buttons
+ */
+function initToggle() {
+    function initToggleCallback() {
+        this.addEventListener('click', handleToggleClick)
+    }
+    getToggles(initToggleCallback);
 }
 
 /**
@@ -188,6 +238,7 @@ function init() {
     initNav()
     initTextFade();
     handleInitialAnimations();
+    initToggle();
 }
 
 (function() {
