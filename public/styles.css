@@ -275,6 +275,10 @@ summary ~ * {
     margin-top: 20px;
 }
 
+.hero__button-wrapper {
+    margin: 0 auto;
+}
+
 .section--cover {
     position: absolute;
 }
@@ -521,6 +525,10 @@ img {
 
     .sub-hero-copy__text {}
 
+    .hero__button-wrapper {
+        max-width: 80%;
+    }
+
     /** 
     *   Images
     */
@@ -719,6 +727,10 @@ img {
     .section--contained {
         max-width: 960px;
         padding: 0 15px;
+    }
+
+    .hero__button-wrapper {
+        max-width: 35%;
     }
 
     .divider-right {
